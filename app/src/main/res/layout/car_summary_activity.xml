@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray_light">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/summary_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/car_summary_background">
+
+        <ImageView
+            android:id="@+id/car_logo_view"
+            android:layout_width="@dimen/icon_size_large"
+            android:layout_height="@dimen/icon_size_large"
+            android:layout_marginTop="@dimen/margin_16"
+            android:importantForAccessibility="no"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/manufacturer_text_view"
+            app:layout_constraintEnd_toEndOf="@id/manufacturer_text_view"
+            app:layout_constraintBottom_toTopOf="@id/manufacturer_text_view"
+            app:srcCompat="@mipmap/ic_bmw_logo"/>
+
+        <TextView
+            android:id="@+id/manufacturer_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/header_text_size"
+            android:layout_marginBottom="@dimen/margin_32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/model_text_view"
+            tools:text="BMW"/>
+
+        <TextView
+            android:id="@+id/model_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/toolbar_text_size"
+            android:layout_marginBottom="@dimen/margin_16"
+            app:layout_constraintStart_toStartOf="@id/year_text_view"
+            app:layout_constraintBottom_toTopOf="@id/year_text_view"
+            tools:text="Model: X1"/>
+
+        <TextView
+            android:id="@+id/year_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/toolbar_text_size"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_100"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Build year: 2022"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

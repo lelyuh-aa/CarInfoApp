@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CarInfoApp</string>
+    <string name="manufacturer_title">Manufacturers</string>
+    <string name="error_title">We are very sorry..</string>
+    <string name="error_message">Service temporarily unavailable, please try again later</string>
+    <string name="error_ok_button">OK</string>
+    <string name="error_close_button">Close App</string>
+    <string name="search_hint">Search..</string>
+    <string name="search_empty_result">No results were found for your search, please try another request</string>
+    <string name="car_build_dates_title_format">%1$s %2$s</string>
+    <string name="car_summary_model_format">Model: %1$s</string>
+    <string name="car_summary_year_format">Build year: %1$s</string>
+</resources>
