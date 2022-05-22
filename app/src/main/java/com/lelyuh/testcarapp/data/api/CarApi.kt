@@ -1,6 +1,6 @@
 package com.lelyuh.testcarapp.data.api
 
-import com.lelyuh.testcarapp.models.data.CarServerResponseBean
+import com.lelyuh.testcarapp.models.data.CarServerResponse
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -20,7 +20,7 @@ interface CarApi {
         @Query("page") currentPage: Int,
         @Query("pageSize") pageSize: Int = MANUFACTURER_PAGE_SIZE,
         @Query("wa_key") apiKey: String = API_KEY
-    ): Single<CarServerResponseBean>
+    ): Single<CarServerResponse>
 
     /**
      * Get all car models of given manufacturer by [manufacturerId]
@@ -29,7 +29,7 @@ interface CarApi {
     fun carTypes(
         @Query("manufacturer") manufacturerId: String,
         @Query("wa_key") apiKey: String = API_KEY
-    ): Single<CarServerResponseBean>
+    ): Single<CarServerResponse>
 
     /**
      * Get all build dates of given car model by [manufacturerId] and [carModel]
@@ -39,10 +39,10 @@ interface CarApi {
         @Query("manufacturer") manufacturerId: String,
         @Query("main-type") carModel: String,
         @Query("wa_key") apiKey: String = API_KEY
-    ): Single<CarServerResponseBean>
+    ): Single<CarServerResponse>
 
     private companion object {
-        private const val API_KEY = "coding-puzzle-client-449cc9d"
+        private const val API_KEY = "read README.md file"
 
         private const val MANUFACTURER_PATH = "manufacturer"
         private const val CAR_TYPES_PATH = "main-types"

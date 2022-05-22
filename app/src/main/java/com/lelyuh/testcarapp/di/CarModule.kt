@@ -34,6 +34,6 @@ class CarModule {
     fun provideRx(): RxSchedulers = RxSchedulersImpl()
 
     private companion object {
-        private const val CARS_BASE_URL = "https://api-aws-eu-qa-1.auto1-test.com/v1/car-types/"
+        private const val CARS_BASE_URL = "read README.md file"
     }
 }

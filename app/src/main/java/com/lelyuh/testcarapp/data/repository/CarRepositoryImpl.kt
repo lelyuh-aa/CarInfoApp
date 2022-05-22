@@ -6,7 +6,7 @@ import io.reactivex.rxjava3.core.Single
 
 /**
  * Repository implementation for car information
- * Realize caching of loaded information to avoid redundant queries to server
+ * Realize caching of loaded information to avoid redundant queries to server and paging with loading manufacturers
  *
  * @constructor
  * @param   carApi  server api for loading information about cars

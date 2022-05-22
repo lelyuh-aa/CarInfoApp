@@ -3,7 +3,7 @@ package com.lelyuh.testcarapp.domain.icon
 import com.lelyuh.testcarapp.R
 
 /**
- * As API don't contain information about icons of manufacturers, use local mapping for few popular brands
+ * As API doesn't contain information about icons of manufacturers, use local mapping for few popular brands
  * It is not very good for apk size, but nice to user
  *
  * @author Leliukh Aleksandr
@@ -12,7 +12,6 @@ object CarIconHelper {
 
     private val carIconsMap = mapOf(
         "Abarth" to R.mipmap.ic_abarth_logo,
-        "Alfa Romeo" to R.mipmap.ic_alfa_romeo,
         "Bentley" to R.mipmap.ic_bentley,
         "BMW" to R.mipmap.ic_bmw_logo,
         "Caterham" to R.mipmap.ic_caterham,

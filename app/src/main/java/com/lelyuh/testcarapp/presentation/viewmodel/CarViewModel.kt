@@ -40,6 +40,9 @@ internal class CarViewModel(
 
     private val disposable = CompositeDisposable()
 
+    /**
+     * Load all car manufacturers
+     */
     fun loadManufacturers() {
         disposable.clear()
         disposable.add(
@@ -54,6 +57,9 @@ internal class CarViewModel(
         )
     }
 
+    /**
+     * Load all car models on given manufacturer by [manufacturerId]
+     */
     fun loadCarTypes(manufacturerId: String) {
         disposable.clear()
         disposable.add(
@@ -68,6 +74,9 @@ internal class CarViewModel(
         )
     }
 
+    /**
+     * Load all car build dates on given model by [manufacturerId] and [carTypeModel]
+     */
     fun loadCarModelBuildDates(manufacturerId: String, carTypeModel: String) {
         disposable.clear()
         disposable.add(

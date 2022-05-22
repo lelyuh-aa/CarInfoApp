@@ -1,7 +1,7 @@
 package com.lelyuh.testcarapp.data.repository
 
 import com.lelyuh.testcarapp.data.api.CarApi
-import com.lelyuh.testcarapp.models.data.CarServerResponseBean
+import com.lelyuh.testcarapp.models.data.CarServerResponse
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
@@ -18,7 +18,7 @@ class CarRepositoryTest {
     @Test
     fun `test success get manufacturer list first call`() {
         val manufacturerMap = mapOf("1" to "Audi", "2" to "BMW")
-        val response = CarServerResponseBean(
+        val response = CarServerResponse(
             page = 0,
             pageSize = 2,
             totalPageCount = 2,
@@ -39,13 +39,13 @@ class CarRepositoryTest {
         val secondManufacturerMap = mapOf("3" to "Mercedes", "4" to "Ferrari")
         val expectedFinalData = firstManufacturerMap.plus(secondManufacturerMap)
 
-        val firstResponse = CarServerResponseBean(
+        val firstResponse = CarServerResponse(
             page = 0,
             pageSize = 2,
             totalPageCount = 2,
             dataMap = firstManufacturerMap
         )
-        val secondResponse = CarServerResponseBean(
+        val secondResponse = CarServerResponse(
             page = 1,
             pageSize = 2,
             totalPageCount = 2,
@@ -75,13 +75,13 @@ class CarRepositoryTest {
         val secondManufacturerMap = mapOf("3" to "Mercedes", "4" to "Ferrari")
         val expectedFinalData = firstManufacturerMap.plus(secondManufacturerMap)
 
-        val firstResponse = CarServerResponseBean(
+        val firstResponse = CarServerResponse(
             page = 0,
             pageSize = 2,
             totalPageCount = 2,
             dataMap = firstManufacturerMap
         )
-        val secondResponse = CarServerResponseBean(
+        val secondResponse = CarServerResponse(
             page = 1,
             pageSize = 2,
             totalPageCount = 2,
@@ -111,7 +111,7 @@ class CarRepositoryTest {
     @Test
     fun `test error get manufacturer by null current page`() {
         val manufacturerMap = mapOf("1" to "Audi", "2" to "BMW")
-        val response = CarServerResponseBean(
+        val response = CarServerResponse(
             page = null,
             pageSize = 2,
             totalPageCount = 1,
@@ -129,7 +129,7 @@ class CarRepositoryTest {
     @Test
     fun `test error get manufacturer by null total pages count`() {
         val manufacturerMap = mapOf("1" to "Audi", "2" to "BMW")
-        val response = CarServerResponseBean(
+        val response = CarServerResponse(
             page = 0,
             pageSize = 2,
             totalPageCount = null,
@@ -159,7 +159,7 @@ class CarRepositoryTest {
     fun `test success carTypes from server`() {
         val manufacturerId = "123"
         val carTypesMap = mapOf("Audi" to "Audi", "BMW" to "BMW")
-        val response = CarServerResponseBean(
+        val response = CarServerResponse(
             page = 0,
             pageSize = 2,
             totalPageCount = 1,
@@ -179,7 +179,7 @@ class CarRepositoryTest {
     fun `test success carTypes from cache on second call`() {
         val manufacturerId = "123"
         val carTypesMap = mapOf("Audi" to "Audi", "BMW" to "BMW")
-        val response = CarServerResponseBean(
+        val response = CarServerResponse(
             page = 0,
             pageSize = 2,
             totalPageCount = 1,
@@ -215,7 +215,7 @@ class CarRepositoryTest {
         val manufacturerId = "123"
         val carModel = "BMW"
         val buildDatesMap = mapOf("2021" to "2021", "2022" to "2022")
-        val response = CarServerResponseBean(
+        val response = CarServerResponse(
             page = 0,
             pageSize = 2,
             totalPageCount = 1,
@@ -236,7 +236,7 @@ class CarRepositoryTest {
         val manufacturerId = "123"
         val carModel = "BMW"
         val buildDatesMap = mapOf("2021" to "2021", "2022" to "2022")
-        val response = CarServerResponseBean(
+        val response = CarServerResponse(
             page = 0,
             pageSize = 2,
             totalPageCount = 1,

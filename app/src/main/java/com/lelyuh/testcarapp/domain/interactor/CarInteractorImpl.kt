@@ -9,6 +9,9 @@ import io.reactivex.rxjava3.core.Single
  * Interactor implementation for car information
  * Contains all use cases to interact with user actions
  *
+ * @constructor
+ * @param   repository  repository for loading information about cars
+ *
  * @author Leliukh Aleksandr
  */
 internal class CarInteractorImpl(

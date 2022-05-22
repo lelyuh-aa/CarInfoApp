@@ -4,7 +4,7 @@ import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
 /**
- * Server bean containing information about:
+ * Server entity containing information about:
  * - different car manufacturers
  * - all car models for current manufacturer
  * - build years for current model for current manufacturer
@@ -19,7 +19,7 @@ import com.google.gson.annotations.SerializedName
  * @author Leliukh Aleksandr
  */
 @Keep
-data class CarServerResponseBean(
+data class CarServerResponse(
     val page: Int?,
     val pageSize: Int?,
     val totalPageCount: Int?,
